@@ -1,0 +1,176 @@
+// Content Preview
+.content-preview {
+  border-radius: $border-radius;
+  background-color: $light;
+  margin-bottom: 3rem;
+
+  &-img {
+    margin: 0 auto 1rem auto;
+    clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0% 0%);
+  }
+
+  &-body {
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+  }
+
+  &-title {
+    margin: 0 0 1.5rem 0;
+  }
+
+  &-button {
+    @extend .button, .button-primary;
+    display: block;
+    text-align: center;
+  }
+
+  @media only screen and (min-width: $media-md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-img {
+      clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 99%, 0 0);
+      width: 50%;
+      margin-right: $gutters * .5;
+      margin-bottom: 0;
+    }
+
+    &-body {
+      padding: 2rem 2rem 2rem 0;
+      width: 50%;
+      margin-left: $gutters * .5;
+      text-align: left;
+    }
+
+    &-button {
+      display: inline-block;
+    }
+
+    &:nth-child(even) {
+
+      .content-preview-img {
+        order: 1;
+        margin-right: 0;
+        margin-left: $gutters * .5;
+        clip-path: polygon(100% 0, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
+      }
+
+      .content-preview-body {
+        padding: 2rem 0 2rem 2rem;
+        order: 0;
+        margin-left: 0;
+        margin-right: $gutters * .5;
+        text-align: right;
+      }
+    }
+  }
+}
+
+// Recipe Archive
+#recipe-archive {
+  display: flex;
+  flex-flow: row wrap;
+
+  @media only screen and (min-width: $media-md) {
+    margin: -$gutters/2;
+  }
+}
+
+// Recipe Preview
+.recipe-preview {
+  background-color: $light;
+  margin-bottom: $wrapper;
+  border-radius: $border-radius;
+  height: 100%;
+
+  &-img {
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+  }
+
+  &-content {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    font-size: $font-size-small;
+  }
+
+  &-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &-button {
+    @extend .button, .button-primary, .button-block;
+  }
+
+  @media only screen and (min-width: $media-md) {
+    margin: $gutters/2;
+    //flex-grow: 1;
+    width: calc(50% - #{$gutters});
+  }
+
+  @media only screen and (min-width: $media-xl) {
+    width: calc(33% - #{$gutters});
+  }
+}
+
+// Page Header
+.page-header {
+  padding: $wrapper 0;
+  background-color: $light;
+  text-align: center;
+
+  .page-title {
+    margin: 0;
+  }
+}
+
+// Recipe
+.recipe {
+  padding: 1.5rem;
+  background-color: $light;
+  margin: 0 auto;
+
+  &-header {
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid $gray;
+
+    &-img {
+      margin-bottom: 1.5rem;
+    }
+
+    &-content {
+
+      h1 {
+        font-size: 2.25rem;
+      }
+    }
+  }
+
+  &-section-title {
+    font-size: 1.75rem;
+  }
+
+  @media only screen and (min-width: $media-md) {
+
+    &-header {
+      display: flex;
+      flex-direction: row;
+
+      &-img {
+        order: 1;
+        margin-bottom: 0;
+        margin-left: $gutters/2;
+        margin-top: 1rem;
+        width: calc(45% - #{$gutters/2});
+      }
+
+      &-content {
+        order: 0;
+        margin-right: $gutters/2;
+        width: calc(55% - #{$gutters/2});
+      }
+    }
+  }
+}

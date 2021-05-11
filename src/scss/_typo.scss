@@ -1,0 +1,40 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// Paragraph
+p {
+  margin: 0 0 $paragraph-margin-bottom 0;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $headings-color;
+  font-family: $headings-font-family-;
+  font-style: italic;
+  margin: 0 0 $headings-margin-bottom 0;
+  font-weight: $font-weight-bold;
+  line-height: $headings-line-height;
+}
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.40rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.6rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+
+// Links
+a {
+  color: $primary;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Font Sizes
+.font-size-small {
+  font-size: $font-size-small;
+}
+.font-size-large {
+  font-size: $font-size-large;
+}

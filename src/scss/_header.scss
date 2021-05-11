@@ -1,0 +1,154 @@
+// Site Header
+#site-header {
+  padding: 1.25rem 0;
+  background: $dark;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// Site Title
+#site-title {
+  color: $white;
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+
+  a {
+    color: $white;
+    text-decoration: none;
+    transition: $transition;
+  }
+
+  &:hover {
+
+    a {
+      color: $primary;
+    }
+  }
+}
+
+// Toggle
+.toggle {
+  padding: .5rem;
+  cursor: pointer;
+
+  span {
+    width: 35px;
+    height: 2px;
+    background: $white;
+    display: block;
+    transition: $transition;
+
+    &:not(:last-child) {
+      margin-bottom: .6rem;
+    }
+  }
+
+  &.opened {
+
+    span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px) translateX(8px)
+    }
+    span:nth-child(2) {
+      transform: rotate(-45deg);
+    }
+    span:nth-child(3) {
+      opacity: 0;
+      transform: translateY(-.6rem);
+    }
+  }
+}
+
+// Header Toggle
+#header-toggle {
+  z-index: 999;
+
+  @media only screen and (min-width: $media-lg) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// Mobile Nav
+#mobile-nav {
+  background: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  padding: 2rem;
+  transform: translateX(-100%);
+  transition: $transition;
+  z-index: 999;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .25);
+
+  .menu {
+
+    li {
+
+      a {
+        color: $gray;
+        font-weight: $font-weight-bold;
+        padding: 1rem 0;
+        display: block;
+        font-size: $font-size-large;
+
+        &.active {
+          color: $dark;
+        }
+      }
+    }
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  @media only screen and (min-width: $media-lg) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// Desktop Nav
+#desktop-nav {
+  display: none;
+  visibility: hidden;
+
+  .menu {
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      padding: 1rem;
+      color: $gray;
+      font-size: $font-size-small;
+      position: relative;
+      font-weight: $font-weight-bold;
+      transition: $transition;
+
+      &:hover, &.active {
+        color: $white;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $media-lg) {
+    display: block;
+    visibility: visible;
+  }
+}
+
+
+// Site Logo
+#site-logo {
+  height: auto;
+  width: 250px;
+}

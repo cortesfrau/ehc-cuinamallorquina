@@ -1,0 +1,40 @@
+// Buttons
+.button {
+  padding: 1rem 2rem;
+  background: $light;
+  color: $body-color;
+  border-radius: $border-radius;
+  transition: $transition;
+  text-decoration: none;
+  display: inline-block;
+  font-size: $font-size-normal;
+
+  &:hover {
+    opacity: .75;
+  }
+
+  &-primary {
+    background: $primary;
+    color: $white;
+  }
+
+  &-disabled {
+    background-color: $gray;
+    color: $light;
+    cursor: default;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &-small {
+    padding: .5rem 1rem;
+    font-size: $font-size-small;
+  }
+
+  &-block {
+    display: block;
+    text-align: center;
+  }
+}

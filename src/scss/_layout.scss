@@ -1,0 +1,127 @@
+// HTML & Body
+html, body {
+  position: relative;
+  color: $body-color;
+  background: $body-bg;
+  font-size: $font-size-normal;
+  font-family: $font-family-normal;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  margin: 0;
+  padding: 0;
+
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+// Container
+.container {
+  display: block;
+  width: $container-width;
+  max-width: $container-max-width;
+  margin: 0 auto;
+}
+
+// Wrapper
+.wrapper {
+  padding-top: $wrapper;
+  padding-bottom: $wrapper;
+}
+.wrapper-large {
+  padding-top: $wrapper-large;
+  padding-bottom: $wrapper-large;
+}
+.wrapper-bottom {
+  padding-bottom: $wrapper;
+}
+.wrapper-top {
+  padding-top: $wrapper;
+}
+
+// Margins
+.margin-0 {
+  margin: 0;
+}
+
+// Body Overlay
+#body-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $dark;
+  opacity: .9;
+  display: none;
+  visibility: hidden;
+
+  &.show {
+    display: block;
+    visibility: visible;
+  }
+}
+
+// Images
+img {
+  width: 100%;
+}
+
+// Figures
+figure {
+  margin: $paragraph-margin-bottom * 1.5 0;
+
+  figcaption {
+    text-align: center;
+    font-size: $font-size-small;
+    font-style: italic;
+    margin: .5rem 0 0 0;
+  }
+
+  @media only screen and (min-width: $media-lg) {
+    &.figure-right {
+      float: right;
+      margin: 1.5rem 0 1.5rem 2rem;
+      max-width: 50%;
+    }
+    &.figure-left {
+      float: left;
+      margin: 1.5rem 2rem 1.5rem 0;
+      max-width: 50%;
+    }
+  }
+}
+
+// Lists
+ul, ol {
+  margin-top: 0;
+  margin-bottom: $paragraph-margin-bottom;
+  padding-left: 30px;
+
+  li {
+    margin-bottom: $paragraph-margin-bottom * .33;
+  }
+}
+
+// Iframe
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+  margin: 0 auto;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
