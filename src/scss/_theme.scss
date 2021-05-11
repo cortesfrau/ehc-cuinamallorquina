@@ -18,6 +18,10 @@
     margin: 0 0 1.5rem 0;
   }
 
+  &-text {
+    margin: 0 0 1.75rem 0;
+  }
+
   &-button {
     @extend .button, .button-primary;
     display: block;
@@ -172,5 +176,141 @@
         width: calc(55% - #{$gutters/2});
       }
     }
+  }
+}
+
+
+// Icons
+.icons {
+  display: flex;
+  clear: both;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: $paragraph-margin-bottom*2 0;
+  padding: 2rem;
+  background: $light;
+
+  .icon {
+    width: 170px;
+    cursor: pointer;
+    margin: 1rem;
+    text-align: center;
+
+    path {
+      fill: $gray;
+      stroke-width: 0;
+      stroke: $gray;
+      stroke-dashoffset: 0;
+    }
+
+    h4 {
+      margin: 1rem 0 0 0;
+    }
+
+    // Cuiner
+    &.cuiner {
+
+      &:hover path {
+        animation: draw-cuiner 500ms linear 0s forwards;
+      }
+
+      path {
+        stroke-dasharray: 3280;
+      }
+    }
+
+    // Coberts
+    &.coberts {
+
+      &:hover path {
+        animation: draw-coberts 500ms linear 0s forwards;
+      }
+
+      path {
+        stroke-dasharray: 2410;
+      }
+    }
+
+    // Servei
+    &.servei {
+
+      &:hover path {
+        animation: draw-servei 500ms linear 0s forwards;
+      }
+
+      path {
+        stroke-dasharray: 1200;
+      }
+    }
+  }
+}
+@keyframes draw-cuiner {
+  0% {
+    stroke-dashoffset: 3280;
+    fill: transparent;
+    stroke: $gray;
+    stroke-width: 5;
+  }
+  40% {
+    stroke-dashoffset: 1640;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+    stroke: $gray;
+    stroke-width: 5;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: $primary;
+    stroke: $primary;
+    stroke-width: 0;
+  }
+}
+
+@keyframes draw-coberts {
+  0% {
+    stroke-dashoffset: 2410;
+    fill: transparent;
+    stroke: $gray;
+    stroke-width: 5;
+  }
+  40% {
+    stroke-dashoffset: 1205;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+    stroke: $gray;
+    stroke-width: 5;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: $primary;
+    stroke: $primary;
+    stroke-width: 0;
+  }
+}
+@keyframes draw-servei {
+  0% {
+    stroke-dashoffset: 1200;
+    fill: transparent;
+    stroke-width: 5;
+  }
+  40% {
+    stroke-dashoffset: 600;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+    stroke: $gray;
+    stroke-width: 5;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: $primary;
+    stroke: $primary;
+    stroke-width: 0;
   }
 }

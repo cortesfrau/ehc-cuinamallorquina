@@ -33,7 +33,7 @@ $font-size-normal: 1rem;
 $font-size-small: $font-size-normal * .9;
 $font-size-large: $font-size-normal * 1.1;
 $font-family-sans-serif: 'Open Sans', sans-serif;
-$font-family-serif: 'Playfair Display', serif;
+$font-family-serif: 'Oswald', sans-serif;
 $font-family-normal: $font-family-sans-serif;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
@@ -53,7 +53,7 @@ $paragraph-margin-bottom: 1.5rem;
 
 // Headings
 $headings-color: $body-color;
-$headings-font-family-: $font-family-serif;
+$headings-font-family: $font-family-serif;
 $headings-margin-bottom: 2rem;
 $headings-line-height: 1.2;
 $h1-font-size: $font-size-normal * 3.5;
@@ -62,8 +62,6 @@ $h3-font-size: $font-size-normal * 2.25;
 $h4-font-size: $font-size-normal * 1.75;
 $h5-font-size: $font-size-normal * 1.25;
 $h6-font-size: $font-size-normal;
-
-
 
 // Transitions
 $transition: all .2s;
