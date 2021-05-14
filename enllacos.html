@@ -1,9 +1,57 @@
-<!-- Header -->
-<include src="src/parts/header.html" locals='{
-    "page_title": "Enllaços | Cuina Mallorquina",
-    "page_desc": "Enllaços sobre els materials i la informació utilitzada en aquest lloc web."
-  }'>
-</include>
+<!doctype html>
+<html lang="ca">
+
+<head>
+  <meta charset="utf-8">
+  <title>Enllaços | Cuina Mallorquina</title>
+  <meta name="description" content="Enllaços sobre els materials i la informació utilitzada en aquest lloc web">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="./src/img/favicon.png">
+  <link rel="stylesheet" href="./style.scss">
+  <script src="./index.js"></script>
+</head>
+
+<body>
+
+<!-- Body Overlay -->
+<div id="body-overlay"></div>
+
+<!-- Mobile Nav -->
+<nav id="mobile-nav">
+  <ul class="menu">
+    <li><a href="index.html">Inici</a></li>
+    <li><a href="plats-mallorquins.html">Plats mallorquins</a></li>
+    <li><a href="qui-som.html">Qui som</a></li>
+    <li><a href="enllacos.html">Enllaços</a></li>
+  </ul>
+</nav>
+
+<!-- Site Header -->
+<header id="site-header">
+  <div class="container">
+    <h1 id="site-title">
+      <a href="index.html">
+        <img id="site-logo" src="./src/img/cuina-mallorquina-logo.svg" alt="Logotip de Cuina Mallorquina">
+      </a>
+    </h1>
+    <div id="header-toggle" class="toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Desktop Nav : START -->
+    <nav id="desktop-nav">
+      <ul class="menu">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="plats-mallorquins.html">Plats mallorquins</a></li>
+        <li><a href="qui-som.html">Qui som</a></li>
+        <li><a href="enllacos.html">Enllaços</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
 
 
 <!-- Site Main : START -->
@@ -57,4 +105,38 @@
 </main>
 
 <!-- Footer -->
-<include src="src/parts/footer.html"></include>
+<footer id="site-footer">
+  <div class="container">
+    <div class="footer-columns">
+
+      <div class="footer-column">
+        <a href="index.html"><img id="footer-logo" src="./src/img/cuina-mallorquina-logo.svg" alt="Logo de Cuina Mallorquina"></a>
+        <p class="font-size-small margin-0">©2021 Cuina Mallorquina</p>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-column-title">Seccions</h4>
+        <nav id="footer-nav">
+          <ul class="menu">
+            <li><a href="index.html">Inici</a></li>
+            <li><a href="plats-mallorquins.html">Plats mallorquins</a></li>
+            <li><a href="qui-som.html">Qui som</a></li>
+            <li><a href="enllacos.html">Enllaços</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h4 class="footer-column-title">Crèdits</h4>
+        <p class="font-size-small margin-0">Lloc web realitzat per <strong>Lluís Cortès Frau</strong></p>
+        <p class="font-size-small">Assignatura: <strong>Eines HTML i CSS</strong></p>
+        <a class="button button-primary button-small" target="_blank" href="https://github.com/cortesfrau/ehc-pac1-cuinamallorquina.git">Veure a GitHub</a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

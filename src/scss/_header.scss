@@ -151,4 +151,16 @@
 #site-logo {
   height: auto;
   width: 250px;
+
+  @media only screen and (min-width: $media-md) {
+    width: 260px;
+  }
+
+  @media only screen and (min-width: $media-lg) {
+    width: 270px;
+  }
+
+  @media only screen and (min-width: $media-xl) {
+    width: 280px;
+  }
 }
