@@ -1,10 +1,66 @@
 <!-- Header -->
-<include src="src/parts/header.html">
-  {
-    "page_title": "Cuina Mallorquina | La gastronomía de Mallorca",
-    "page_desc": "Lloc web sobre la gastronomía de Mallorca"
-  }
-</include>
+<!--<include src="src/parts/header.html">-->
+<!--  {-->
+<!--    "page_title": "Cuina Mallorquina | La gastronomía de Mallorca",-->
+<!--    "page_desc": "Lloc web sobre la gastronomía de Mallorca"-->
+<!--  }-->
+<!--</include>-->
+
+
+<!doctype html>
+<html lang="ca">
+
+<head>
+  <meta charset="utf-8">
+  <title>Cuina Mallorquina | La gastronomía de Mallorca</title>
+  <meta name="description" content="Lloc web sobre la gastronomía de Mallorca">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="./src/img/favicon.png">
+  <link rel="stylesheet" href="./style.scss">
+  <script src="./index.js"></script>
+</head>
+
+<body>
+
+<!-- Body Overlay -->
+<div id="body-overlay"></div>
+
+<!-- Mobile Nav -->
+<nav id="mobile-nav">
+  <ul class="menu">
+    <li><a href="index.html">Inici</a></li>
+    <li><a href="plats-mallorquins.html">Plats mallorquins</a></li>
+    <li><a href="qui-som.html">Qui som</a></li>
+    <li><a href="enllacos.html">Enllaços</a></li>
+  </ul>
+</nav>
+
+<!-- Site Header -->
+<header id="site-header">
+  <div class="container">
+    <h1 id="site-title">
+      <a href="index.html">
+        <img id="site-logo" src="./src/img/cuina-mallorquina-logo.svg" alt="Logotip de Cuina Mallorquina">
+      </a>
+    </h1>
+    <div id="header-toggle" class="toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Desktop Nav : START -->
+    <nav id="desktop-nav">
+      <ul class="menu">
+        <li><a href="index.html">Inici</a></li>
+        <li><a href="plats-mallorquins.html">Plats mallorquins</a></li>
+        <li><a href="qui-som.html">Qui som</a></li>
+        <li><a href="enllacos.html">Enllaços</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
 
 <!-- Site Main : START -->
 <main id="site-main">
