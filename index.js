@@ -10,11 +10,8 @@ window.onload = function() {
   headerToggle();
   activeLinks();
 
-
   // Lightbox
   var lightbox = new SimpleLightbox('.gallery-item');
-
-
 
   // Is Element Visible?
   var isInViewport = function(elem) {
@@ -26,16 +23,18 @@ window.onload = function() {
       distance.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   };
-// read the link on how above code works
 
   var findMe = document.querySelectorAll('.animated');
 
+  findMe.forEach(element => {
+    if(isInViewport(element)){
+      element.classList.add('animate');
+    }
+  });
+
   window.addEventListener('scroll', function(event) {
-// add event on scroll
     findMe.forEach(element => {
-      //for each .thisisatest
       if (isInViewport(element)) {
-        //if in Viewport
         element.classList.add('animate');
       }
     });
