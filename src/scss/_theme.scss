@@ -103,6 +103,7 @@
   &-img {
     border-top-right-radius: $border-radius;
     border-top-left-radius: $border-radius;
+    width: 100%;
 
     &.animate {
       animation: slide-down 300ms linear 0s 1 forwards;
