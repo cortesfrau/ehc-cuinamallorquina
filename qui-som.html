@@ -86,8 +86,13 @@
         (<a href="https://es.wikipedia.org/wiki/Gastronom%C3%ADa_de_Mallorca" target="_blank">Extret de la Wikipedia</a>)
       </p>
 
-      <figure class="figure-right">
-        <img alt="Pa amb sobrassada" src="./src/img/pa-sobrassada.jpg">
+      <figure class="figure-center">
+        <picture>
+          <source srcset="./src/img/pa-sobrassada-600w.jpg 600w" media="(min-width: 768px)" sizes="600px">
+          <source srcset="./src/img/pa-sobrassada-400w.jpg 400w" sizes="100vw">
+          <img src="./src/img/pa-sobrassada-600w.jpg" alt="Pa amb sobrassada">
+        </picture>
+
         <figcaption>Pa amb sobrassada. Fotografia de Juan Antonio Capó
           (<a href="https://www.flickr.com/photos/juan-antonio-capo/4645558378">Font original</a>)
         </figcaption>
@@ -110,27 +115,18 @@
         vitae est vitae lectus varius laoreet. Morbi in risus ut quam tincidunt efficitur eget et augue. Proin ac lorem
         interdum, porta sem non, tristique nulla. Fusce blandit interdum imperdiet.</p>
 
-<!--      <figure class="figure-left">-->
-<!--        <img alt="Pa amb sobrassada" src="./src/img/mallorca.jpg">-->
-<!--        <figcaption>Poble de Mallorca. Fotografia de Brigit-->
-<!--          (<a href="https://pixabay.com/es/photos/tiendas-mediterr%C3%A1neo-callej%C3%B3n-2897328/">Font original</a>)-->
-<!--        </figcaption>-->
-<!--      </figure>-->
 
-
-      <figure class="figure-left">
-        <img alt="Pa amb sobrassada" data-srcset="
-              ./src/img/mallorca.jpg 1000w,
-              ./src/img/mallorca.jpg 500w,
-              ./src/img/mallorca.jpg 250w"
-             sizes="100vw"
-             data-src="./src/img/mallorca.jpg"
-             src="./src/img/mallorca.jpg">
+      <figure class="figure-center">
+        <img alt="Poble de Mallorca"
+             srcset="
+             ./src/img/mallorca-600w.jpg 600w,
+             ./src/img/mallorca-400w.jpg 400w"
+             sizes="(min-width: 1024px) 600px"
+             src="./src/img/mallorca-600w.jpg">
         <figcaption>Poble de Mallorca. Fotografia de Brigit
           (<a href="https://pixabay.com/es/photos/tiendas-mediterr%C3%A1neo-callej%C3%B3n-2897328/">Font original</a>)
         </figcaption>
       </figure>
-
 
 
       <p>Praesent ornare arcu vel mattis blandit. Donec hendrerit hendrerit ultricies. Proin cursus leo velit, nec

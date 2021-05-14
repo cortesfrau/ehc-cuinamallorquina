@@ -5,7 +5,6 @@ import {activeLinks} from './src/js/custom';
 // Simple LightBox
 import SimpleLightbox from 'simplelightbox';
 
-
 window.onload = function() {
   headerToggle();
   activeLinks();
@@ -13,7 +12,7 @@ window.onload = function() {
   // Lightbox
   var lightbox = new SimpleLightbox('.gallery-item');
 
-  // Is Element Visible?
+  // Dinamic class for elements in viewport
   var isInViewport = function(elem) {
     var distance = elem.getBoundingClientRect();
     return (
@@ -23,15 +22,12 @@ window.onload = function() {
       distance.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   };
-
   var findMe = document.querySelectorAll('.animated');
-
   findMe.forEach(element => {
     if(isInViewport(element)){
       element.classList.add('animate');
     }
   });
-
   window.addEventListener('scroll', function(event) {
     findMe.forEach(element => {
       if (isInViewport(element)) {
@@ -39,4 +35,5 @@ window.onload = function() {
       }
     });
   }, false);
+
 }

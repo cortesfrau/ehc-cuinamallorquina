@@ -3,7 +3,13 @@
   opacity: 0;
 
   &.animate {
-    animation: slide-left 500ms linear 0s 1 forwards;
+    animation: slide-down 300ms linear 0s 1 forwards;
+  }
+
+  @media only screen and (min-width: $media-md) {
+    &.animate {
+      animation: slide-left 300ms linear 0s 1 forwards;
+    }
   }
 }
 
@@ -19,3 +25,14 @@
   }
 }
 
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
