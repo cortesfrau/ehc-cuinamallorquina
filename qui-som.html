@@ -163,19 +163,14 @@
         vitae est vitae lectus varius laoreet. Morbi in risus ut quam tincidunt efficitur eget et augue. Proin ac lorem
         interdum, porta sem non, tristique nulla. Fusce blandit interdum imperdiet.</p>
 
-
       <figure class="figure-center">
-        <img alt="Poble de Mallorca"
-             srcset="
-             ./src/img/mallorca-600w.jpg 600w,
-             ./src/img/mallorca-400w.jpg 400w"
-             sizes="(min-width: 1024px) 600px"
-             src="./src/img/mallorca-600w.jpg">
+        <source srcset="./src/img/mallorca-600w.jpg 600w" media="(min-width: 768px)" sizes="600px">
+        <source srcset="./src/img/mallorca-400w.jpg 400w" sizes="100vw">
+        <img src="./src/img/mallorca-600w.jpg" alt="Poble de Mallorca">
         <figcaption>Poble de Mallorca. Fotografia de Brigit
           (<a href="https://pixabay.com/es/photos/tiendas-mediterr%C3%A1neo-callej%C3%B3n-2897328/">Font original</a>)
         </figcaption>
       </figure>
-
 
       <p>Praesent ornare arcu vel mattis blandit. Donec hendrerit hendrerit ultricies. Proin cursus leo velit, nec
         rutrum quam varius eget. Nunc ut augue tortor. Nullam a tortor non leo aliquam varius. Sed sit amet tellus ac
