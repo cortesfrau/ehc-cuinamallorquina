@@ -1,8 +1,78 @@
-// Site Footer
+//-------------------//
+//--- Site Footer ---//
+//-------------------//
+
 #site-footer {
   background: $dark;
   padding-top: $wrapper-large;
   padding-bottom: $wrapper-large;
-  color: $gray;
   text-align: center;
+  color: $gray;
+
+  @media only screen and (min-width: $media-md) {
+    text-align: left;
+  }
+}
+
+// Footer Logo
+#footer-logo {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  margin-bottom: .5rem;
+}
+
+// Footer Columns
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 2rem;
+
+    &-title {
+      color: $white;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media only screen and (min-width: $media-md) {
+
+    .footer-column {
+      width: calc(33% - #{$gutters});
+
+      &:not(:last-child) {
+        margin-right: $gutters;
+      }
+    }
+  }
+}
+
+// Footer Nav
+#footer-nav {
+
+  .menu {
+
+    a {
+      padding: 1rem;
+      color: $gray;
+      font-size: $font-size-small;
+      position: relative;
+      font-weight: $font-weight-bold;
+      transition: $transition;
+
+      &:hover, &.active {
+        color: $white;
+      }
+    }
+  }
+
+  @media only screen and (min-width: $media-md) {
+
+    .menu a {
+      padding: 1rem 0;
+    }
+  }
 }

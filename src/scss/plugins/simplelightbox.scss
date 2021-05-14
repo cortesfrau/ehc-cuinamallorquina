@@ -1,0 +1,15 @@
+//----------------------//
+//--- Simplelightbox ---//
+//----------------------//
+
+// Import Theme Variables
+@import '../variables';
+
+// Customization
+$sl-font-family: $font-family-normal;
+$sl-overlay-background: $black;
+$sl-overlay-opacity: 0.9;
+$sl-navigation-color: $white;
+
+// Import Theme
+@import '../../../node_modules/simplelightbox/src/simple-lightbox';
