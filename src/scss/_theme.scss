@@ -135,6 +135,11 @@
   background-color: $light;
   margin: 0 auto;
 
+  &-thumbnail {
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+
   .gallery {
     display: flex;
     margin-bottom: 2rem;
@@ -177,44 +182,51 @@
   }
 
   &-header {
-    padding-bottom: 1rem;
     margin-bottom: 2rem;
-    border-bottom: 1px solid $gray;
 
-    &-img {
-      margin-bottom: 1.5rem;
-    }
-
-    &-content {
+    &-left {
 
       h1 {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
       }
+    }
+
+    &-right {
+      margin-bottom: 1.5rem;
     }
   }
 
   &-section-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
   }
 
   @media only screen and (min-width: $media-md) {
+    padding: 2.5rem;
 
     &-header {
-      display: flex;
-      flex-direction: row;
 
-      &-img {
+      .recipe-section-title {
+        margin-top: 0;
+      }
+
+      &-flex {
+        display: flex;
+        flex-direction: row;
+      }
+
+      &-left {
+        order: 0;
+        margin-right: $gutters/2;
+        width: calc(60% - #{$gutters/2});
+      }
+
+      &-right {
         order: 1;
         margin-bottom: 0;
         margin-left: $gutters/2;
-        margin-top: 1rem;
-        width: calc(45% - #{$gutters/2});
-      }
-
-      &-content {
-        order: 0;
-        margin-right: $gutters/2;
-        width: calc(55% - #{$gutters/2});
+        margin-top: 0;
+        width: calc(40% - #{$gutters/2});
       }
     }
   }
@@ -223,7 +235,7 @@
 
 // Icons
 .icons {
-  padding: 2rem;
+  padding: 3rem 2rem;
   background: $light;
   margin: $paragraph-margin-bottom*2 0;
   clear: both;
