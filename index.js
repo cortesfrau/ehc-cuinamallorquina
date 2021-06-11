@@ -5,12 +5,20 @@ import {activeLinks} from './src/js/custom';
 // Simple LightBox
 import SimpleLightbox from 'simplelightbox';
 
+// Lazy Load
+import LazyLoad from 'vanilla-lazyload';
+
 window.onload = function() {
   headerToggle();
   activeLinks();
 
+  // Lazy Load
+  const lazyLoad = new LazyLoad({
+    elements_selector: '.lazy',
+  });
+
   // Lightbox
-  var lightbox = new SimpleLightbox('.gallery-item');
+  const lightbox = new SimpleLightbox('.gallery-item');
 
   // Dinamic class for elements in viewport
   var isInViewport = function(elem) {
